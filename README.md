@@ -1,6 +1,6 @@
 # Hydrogen-Atom-Wavefunction
 A MATLAB function to:  
-- Calculate hydrogen atom Wavefunction including radial and angular part  
-- Plot radial part of wavefunction R<sub>nl</sub>(r) and radial distribution function r<sup>2</sup>R<sub>nl</sub>(r)<sup>2</sup>  
-- Show 3-dimension image of spherical harmonics  
+- Calculate hydrogen(-like) atom Wavefunction $\phi_{nlm}$ and print it in LaTex  
+- Plot radial part of wavefunction $R_{nl}(r)$ and radial distribution function $r^2{R_{nl}(r)}^2$  
+- Show 3-dimension image of spherical harmonics $Y_{lm}(\theta,\phi)$ 
 - Show 3-dimension image of hydrogen atom wavefunction
