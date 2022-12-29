@@ -4,7 +4,7 @@ function Hydrogen_atom_wavefunction(n,l,m)
 %径向部分
 syms r
 Radial=sqrt((sym(2)/n)^3*(factorial(n-l-1)/(sym(2)*n*factorial(n+l))))*exp(-r/n)*(2*r/n)^l*laguerreL(n-l-1,2*l+1,2*r/n);
-r_max=Find(n,n^2,n^2,1,Radial);%二分法
+r_max=Find(n,n^2,n^2,1,Radial);
 r_max=ceil(r_max);
 R=0:r_max/max(100,40*n):r_max;
 Psi_Radial=double(subs(Radial,r,R));
