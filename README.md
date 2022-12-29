@@ -18,4 +18,4 @@ $R_{n=10,l=4}(r)=\frac{\sqrt{715}}{22522500000}{\left(\frac{Z}{a_{0}}\right)}^{3
 $Y_{l=4,m=2}(\theta,\phi)=\frac{\sqrt{10}}{40\ \sqrt{\pi }}{\left(-\frac{105\ {\cos\left(\theta \right)}^4}{2}+60\ {\cos\left(\theta \right)}^2-\frac{15}{2}\right)}{\mathrm{e}}^{\phi \ 2{}\mathrm{i}}$  
 - Input=`3,1,0`  
 Output=  
-![Radial](https://github.com/Jatro-Tao/Hydrogen-Atom-Wavefunction/blob/main/Image/Radial_n%3D3_l%3D1.png "Radial wavefunction")
+![Wavefunction](https://github.com/Jatro-Tao/Hydrogen-Atom-Wavefunction/blob/main/Image/Wavefunction_3_1_0.png "Wavefunction")
