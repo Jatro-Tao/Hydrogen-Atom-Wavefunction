@@ -9,7 +9,7 @@ if(abs(m)>l)
 end
 
 syms r Z a0 reff x theta phi
-Radial_first=sqrt((sym(2)/n)^3*(factorial(n-l-1)/(sym(2)*n*factorial(n+l))))*(sym(2)/n)^l;
+Radial_first=sqrt((sym(2)/sym(n))^3*(factorial(sym(n)-sym(l)-1)/(sym(2)*sym(n)*factorial(sym(n)+sym(l)))))*(sym(2)/sym(n))^l;
 Radial_first=simplify(Radial_first);
 Radial_second=(Z/a0)^(3/2);
 Radial_third=(reff)^l;
@@ -24,7 +24,7 @@ else
 end
 disp(Radial);
 
-Angular_first=1i^(m+abs(m))*sqrt(((2*l+1)*factorial(l-abs(m)))/(4*sym(pi)*factorial(l+abs(m))));
+Angular_first=1i^(m+abs(m))*sqrt(((2*l+1)*factorial(sym(l)-sym(abs(m))))/(4*sym(pi)*factorial(sym(l)+sym(abs(m)))));
 Angular_first=simplify(Angular_first);
 Angular_second=(1-x^2)^(abs(m)/2)*diff(legendreP(l,x),abs(m));
 Angular_second=expand(Angular_second);
