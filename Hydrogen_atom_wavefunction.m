@@ -54,13 +54,13 @@ Psi=(ones(size(Theta,2),1)*Psi_Radial).*transpose(ones(size(R,2),1)*Psi_Polar);
 [X,Y]=pol2cart(Theta,Radius);
 subplot('Position',[0.75,0.55,0.2,0.35])
 mesh(X,Y,Psi)
-title(['Wavefunction: ','$\Psi_{',num2str(n),num2str(l),num2str(m),'}(r,\theta,\phi=0)$'],'interpreter','latex','FontSize',16)
+title(['Wavefunction: ','$\varphi_{',num2str(n),num2str(l),num2str(m),'}(r,\theta,\phi=0,\pi)$'],'interpreter','latex','FontSize',16)
 
 %绘制概率热图
 axp=subplot('Position',[0.5,0.05,0.45,0.4]);
 surf(X,Y,Psi.^2)
 colormap(axp,inferno);
-title(['${\Psi_{',num2str(n),num2str(l),num2str(m),'}(r,\theta,\phi=0)}^2$'],'interpreter','latex','FontSize',16)
+title(['${\varphi_{',num2str(n),num2str(l),num2str(m),'}(r,\theta,\phi=0,\pi)}^2$'],'interpreter','latex','FontSize',16)
 axis equal
 axis off
 shading interp

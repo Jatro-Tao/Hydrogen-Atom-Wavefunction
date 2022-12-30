@@ -28,8 +28,13 @@ Angular_first=1i^(m+abs(m))*sqrt(((2*l+1)*factorial(sym(l)-sym(abs(m))))/(4*sym(
 Angular_first=simplify(Angular_first);
 Angular_second=(1-x^2)^(abs(m)/2)*diff(legendreP(l,x),abs(m));
 Angular_second=expand(Angular_second);
+Angular_second_poly=sym2poly(Angular_second);
+if(Angular_second_poly(1,1)<0)
+    Angular_first=-Angular_first;
+    Angular_second=-Angular_second;
+end
 Angular_second=subs(Angular_second,x,cos(theta));
-Angular_second=simplify(Angular_second);
+
 Angular_third=exp(1i*m*phi);
 if(l==0)
     Angular=['Y_{l=',num2str(l),',m=',num2str(m),'}(\theta,\phi)=',latex(Angular_first)];
