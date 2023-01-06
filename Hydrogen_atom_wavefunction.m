@@ -32,7 +32,7 @@ Azimuth=exp(1i*m*phi);
 Angular=subs(Polar*Azimuth,x,cos(theta));
 
 %绘制球谐函数
-dx=pi/(30*l+30);
+dx=pi/min(40*l+40,480);
 [phi,theta] = meshgrid(0:dx:2*pi,0:dx:pi);
 Plm = legendre(l,cos(theta));
 if l~=0
@@ -58,8 +58,9 @@ title(['Wavefunction: ','$\varphi_{',num2str(n),num2str(l),num2str(m),'}(r,\thet
 
 %绘制概率热图
 axp=subplot('Position',[0.5,0.05,0.45,0.4]);
+%figure
 surf(X,Y,Psi.^2)
-colormap(axp,inferno);
+colormap(axp,"pink");
 title(['${\varphi_{',num2str(n),num2str(l),num2str(m),'}(r,\theta,\phi=0,\pi)}^2$'],'interpreter','latex','FontSize',16)
 axis equal
 axis off
